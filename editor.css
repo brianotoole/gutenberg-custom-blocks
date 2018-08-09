@@ -11,17 +11,12 @@
  * TEXT BLOCK 
  * ----------------------------------------------------------------------------
  */
-.wp-block-bzo-textblock {
-  background: white;
-  border: 1px dotted green;
-  color: black;
-  padding: 1em 2em;
-}
+.wp-block-bzo-text-block {}
 
 
 /**
  * ----------------------------------------------------------------------------
- * ALT CONTENT
+ * LATEST POSTS
  * ----------------------------------------------------------------------------
  */
- .wp-block-bzo-altcontent-block {}
+ .wp-block-bzo-latest-posts {}

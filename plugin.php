@@ -15,4 +15,4 @@ defined( 'ABSPATH' ) || exit;
 
 // Init blocks
 require_once plugin_dir_path( __FILE__ ) . 'textblock/index.php';
-require_once plugin_dir_path( __FILE__ ) . 'altcontent/index.php';
+//require_once plugin_dir_path( __FILE__ ) . 'latestposts/index.php';

@@ -12,19 +12,13 @@
  * TEXT BLOCK 
  * ----------------------------------------------------------------------------
  */
-.wp-block-bzo-textblock {
-  background-color: #333333;
-  color: #ffffff;
-  padding: 1em 2em;
-}
+.wp-block-bzo-text-block {}
 
 
 
 /**
  * ----------------------------------------------------------------------------
- * ALT CONTENT
+ * LATEST POSTS
  * ----------------------------------------------------------------------------
  */
-.wp-block-bzo-altcontent-block {
-  background: red;
-}
+ .wp-block-bzo-latest-posts {}
