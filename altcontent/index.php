@@ -19,9 +19,9 @@ function bzo_altcontent_block_editor_assets() {
 	// Styles
 	wp_enqueue_style(
 		'bzo-altcontent-block-editor', // Handle
-		plugins_url( 'editor.css', __FILE__ ), // Block editor CSS
+		plugins_url( '../editor.css', __FILE__ ), // Block editor CSS
 		array( 'wp-edit-blocks' ), // Dependency to include the CSS after it
-		filemtime( plugin_dir_path( __FILE__ ) . 'editor.css' ) // filemtime — Gets file modification time.
+		filemtime( plugin_dir_path( __FILE__ ) . '../editor.css' ) // filemtime — Gets file modification time.
 	);
 } 
 // Hook: Editor assets
@@ -33,9 +33,9 @@ function bzo_altcontent_block_frontend_assets() {
 	// Styles
 	wp_enqueue_style(
 		'bzo-altconetnt-block-frontend', // Handle
-		plugins_url( 'style.css', __FILE__ ), // Block frontend CSS
+		plugins_url( '../style.css', __FILE__ ), // Block frontend CSS
 		array( 'wp-blocks' ), // Dependency to include the CSS after it
-		filemtime( plugin_dir_path( __FILE__ ) . 'editor.css' ) // filemtime — Gets file modification time
+		filemtime( plugin_dir_path( __FILE__ ) . '../editor.css' ) // filemtime — Gets file modification time
 	);
 } 
 // Hook: Frontend assets
