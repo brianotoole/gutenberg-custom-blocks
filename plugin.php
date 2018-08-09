@@ -11,9 +11,7 @@
  */
 
 // Exit if accessed directly
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 // Init blocks
 require_once plugin_dir_path( __FILE__ ) . 'textblock/index.php';

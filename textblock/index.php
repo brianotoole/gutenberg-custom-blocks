@@ -2,53 +2,41 @@
 /**
  * BLOCK: Basic Editable Text Block
  */
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
 
-/**
- * Enqueue the block's assets for the editor.
- *
- * `wp-blocks`: includes block type registration and related functions.
- * `wp-element`: includes the WordPress Element abstraction for describing the structure of your blocks.
- * `wp-i18n`: To internationalize the block's. text.
- *
- * @since 1.0.0
- */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
+// Enqueue editor assets
 function bzo_block_editor_assets() {
-	// Scripts.
+	// Scripts
 	wp_enqueue_script(
-		'bzo-block', // Handle.
-		plugins_url( 'block.js', __FILE__ ), // Block.js: We register the block here.
-		array( 'wp-blocks', 'wp-i18n', 'wp-element' ), // Dependencies, defined above.
+		'bzo-block', // Handle
+		plugins_url( 'block.js', __FILE__ ), // Block.js
+		array( 'wp-blocks', 'wp-i18n', 'wp-element' ), // Dependencies
 		filemtime( plugin_dir_path( __FILE__ ) . 'block.js' ) // filemtime — Gets file modification time.
 	);
-	// Styles.
+	// Styles
 	wp_enqueue_style(
-		'bzo-block-editor', // Handle.
-		plugins_url( 'editor.css', __FILE__ ), // Block editor CSS.
-		array( 'wp-edit-blocks' ), // Dependency to include the CSS after it.
+		'bzo-block-editor', // Handle
+		plugins_url( 'editor.css', __FILE__ ), // Block editor CSS
+		array( 'wp-edit-blocks' ), // Dependency to include the CSS after it
 		filemtime( plugin_dir_path( __FILE__ ) . 'editor.css' ) // filemtime — Gets file modification time.
 	);
 } 
-// Hook: Editor assets.
+// Hook: Editor assets
 add_action( 'enqueue_block_editor_assets', 'bzo_block_editor_assets' );
 
 
-/**
- * Enqueue the block's assets for the frontend.
- *
- * @since 1.0.0
- */
+// Enqueue block specific front-end assets
 function bzo_block_frontend_assets() {
-	// Styles.
+	// Styles
 	wp_enqueue_style(
-		'bzo-block-frontend', // Handle.
-		plugins_url( 'style.css', __FILE__ ), // Block frontend CSS.
-		array( 'wp-blocks' ), // Dependency to include the CSS after it.
-		filemtime( plugin_dir_path( __FILE__ ) . 'editor.css' ) // filemtime — Gets file modification time.
+		'bzo-block-frontend', // Handle
+		plugins_url( 'style.css', __FILE__ ), // Block frontend CSS
+		array( 'wp-blocks' ), // Dependency to include the CSS after it
+		filemtime( plugin_dir_path( __FILE__ ) . 'editor.css' ) // filemtime — Gets file modification time
 	);
 } 
-// Hook: Frontend assets.
+// Hook: Frontend assets
 add_action( 'enqueue_block_assets', 'bzo_block_frontend_assets' );
